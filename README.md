@@ -1,4 +1,4 @@
-# basicrpc
+# binaryrpc
 A basic binary RPC layer for Python
 
 # Rationale
@@ -35,7 +35,7 @@ and use that.
 ```
 sock = socket.socket(socket.AF_INET)
 sock.connect(('127.0.0.1', 4242))
-client = basicrpc.Client(sock, constants=CONSTS)
+client = binaryrpc.Client(sock)
 client.somefunction(2, 'a string')
 client.close()
 sock.close()
@@ -46,5 +46,5 @@ sock.close()
 It's on PIP
 
 ```
-pip3 install basicrpc
+pip3 install binaryrpc
 ```

@@ -3,9 +3,9 @@ from collections import namedtuple
 
 testtuple = namedtuple("testtuple","foo bar")
 
-import basicrpc
+import binaryrpc
 
-class TestHandler(basicrpc.Handler):
+class TestHandler(binaryrpc.Handler):
 
     def mul(self, a, b):
         return a*b
@@ -55,7 +55,7 @@ class TestRPC(unittest.TestCase):
         #    self.server.run()
         self.sock = socket.socket(socket.AF_INET)
         self.sock.connect(('127.0.0.1',4242))
-        self.client = basicrpc.Client(self.sock, constants=CONSTS)
+        self.client = binaryrpc.Client(self.sock, constants=CONSTS)
 
     def tearDown(self):
         self.client.server_close()

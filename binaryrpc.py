@@ -8,10 +8,6 @@ supports binary data & no XML
 
 import io, struct, sys, decimal, socket, os, socketserver, logging
 
-import pudb, pdb
-
-logging.basicConfig(level=logging.DEBUG)
-
 TUPLE_0=0
 TUPLE_1=1
 # and so on to

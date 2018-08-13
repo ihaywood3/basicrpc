@@ -1,6 +1,9 @@
 import unittest, socket, socketserver, sys
 from collections import namedtuple
 
+import logging
+logging.basicConfig(level=logging.DEBUG)
+
 testtuple = namedtuple("testtuple","foo bar")
 
 import binaryrpc
